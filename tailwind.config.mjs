@@ -8,10 +8,13 @@ export default {
 			classic: {
 			  white: '#FFFFFF',
 			  black: '#000000',
-			  darkGray: '#333333',
+			  darkGray: '#222831',
 			  gold: '#DAA520',
-			  primary: '#EEEEEE',
-			  secundary: '#DC5F00',
+			  primary: '#393E46',
+			  secundary: '#00ADB5',
+			  colorFuente: '#E0E0E0',
+			  colorAcento: '#BB86FC',
+			  colorBoton: '#EEEEEE'
 			},
 		  },
 		},

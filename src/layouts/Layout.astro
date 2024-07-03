@@ -1,7 +1,6 @@
 ---
 import NavBar from '../components/NavBar.astro';
 import FooterPortofolio from '../components/FooterPortofolio.astro';
-import MenuSm from '../components/MenuSm.astro';
 interface Props {
   title: string;
 }
@@ -19,7 +18,7 @@ const { title } = Astro.props;
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
 </head>
-<body class="w-full font-sans text-classic-black">
+<body class="w-full font-sans bg-classic-darkGray text-classic-black">
   <NavBar />
   <main >
     <slot />

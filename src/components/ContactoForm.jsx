@@ -48,11 +48,11 @@ function ContactForm() {
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
-            <p className="max-w-2xl  text-lg">
+            <p className="max-w-2xl  text-lg text-classic-white">
               ¿Interesado en trabajar juntos o tienes alguna pregunta? ¡No dudes en ponerte en contacto!
             </p>
             <div className="mt-8">
-              <h2 className="mt-2 not-italic text-3xl font-bold mb-5">Redes Sociales</h2>
+              <h2 className="mt-2 not-italic text-3xl font-bold mb-5 text-classic-white">Redes Sociales</h2>
               <div className="flex gap-5">
                 <div>
                   <a href="https://www.instagram.com/marcos0964/" target="_blank">
@@ -121,7 +121,7 @@ function ContactForm() {
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-block w-full rounded-lg bg-classic-secundary px-5 py-3 font-medium text-white sm:w-auto"
+                  className="inline-block w-full  rounded-lg bg-classic-secundary px-5 py-3 font-medium text-classic-white sm:w-auto"
                 >
                   Enviar Mensaje
                 </button>
