@@ -1,12 +1,37 @@
+---
+import DarkMode from './DarkMode';
+---
+<section class="w-full h-20 flex md:justify-between md:items-center lg:justify-center lg:items-center relative">
 
-
-<section class="w-full h-20 flex justify-end md:justify-center md:items-center lg:justify-center lg:items-center relative">
-    <nav id="menu" class="hidden lg:flex md:flex justify-center items-center gap-11  text-classic-colorFuente text-xl text-fontFamily-sans">
-        <a class="hover:border-b-2 hover:border-b-classic-secundary  hover:text-classic-colorFuente" href="#sobremi">Sobre Mi</a>
-        <a class="hover:border-b-2 hover:border-b-classic-secundary hover:text-classic-colorFuente" href="#proyectos">Proyectos</a>
-        <a class="hover:border-b-2 hover:border-b-classic-secundary hover:text-classic-colorFuente" href="#contacto">Contacto</a>
-        <a class="hover:border-b-2 hover:border-b-classic-secundary hover:text-classic-colorFuente" href="#educacion">Educacion</a>
-    </nav>
+  <nav id="menu" class="hidden lg:flex md:flex justify-center items-center gap-11 text-xl font-bold">
+    <a href="#sobremi">
+      <button class="w-28 h-[50px] rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[4px] before:bg-gradient-to-r before:bg-classic-secundary dark:before:bg-classic-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full text-black dark:text-white bg-transparent">
+        Sobre Mi
+      </button>
+    </a>
+    <a href="#proyectos">
+      <button class="w-28 h-[50px] rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[4px] before:bg-gradient-to-r before:bg-classic-secundary dark:before:bg-classic-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full text-black dark:text-white bg-transparent">
+        Proyectos
+      </button>
+    </a>
+    <a href="#contacto">
+      <button class="w-28 h-[50px] rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[4px] before:bg-gradient-to-r before:bg-classic-secundary dark:before:bg-classic-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full text-black dark:text-white bg-transparent">
+        Contacto
+      </button>
+    </a>
+    <a href="#educacion">
+      <button class="w-28 h-[50px] rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[4px] before:bg-gradient-to-r before:bg-classic-secundary dark:before:bg-classic-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full text-black dark:text-white bg-transparent">
+        Educacion
+      </button>
+    </a>
+  </nav>
+  <section class="absolute top-3 right-0">
+    <DarkMode client:load/>
+  </section>
 </section>
 
-
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

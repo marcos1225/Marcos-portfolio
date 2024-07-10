@@ -44,7 +44,7 @@ function ContactForm() {
   };
 
   return (
-    <section id="contacto" className="border-t-4 border-gray-100 ">
+    <section id="contacto" className="border-t-4 border-gray-100 dark:border-gray-800 dark:text-white ">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
@@ -121,7 +121,7 @@ function ContactForm() {
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-block w-full  rounded-lg bg-classic-secundary px-5 py-3 font-medium text-classic-white sm:w-auto"
+                  className="inline-block w-full  rounded-lg bg-classic-secundary px-5 py-3 font-medium text-classic-white sm:w-auto dark:bg-classic-primary"
                 >
                   Enviar Mensaje
                 </button>
