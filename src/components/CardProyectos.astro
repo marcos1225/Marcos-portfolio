@@ -3,20 +3,42 @@ interface Props {
     urlImagen?: string;
     descripcion?: string;
     tecnologias?: string[];
+    git?: string;
+    urlWeb?: string;
 }
 
-const { urlImagen, descripcion, tecnologias } = Astro.props;
+const { urlImagen, descripcion, tecnologias, git, urlWeb } = Astro.props;
 ---
-<section class="w-full h-96 flex flex-col justify-center items-center shadow-lg rounded-3xl transition-transform duration-300 transform hover:scale-105 hover:cursor-pointer bg-classic-white">
-    <div class="w-full h-64">
-        <img class="w-full h-full rounded-t-3xl object-cover" src={urlImagen} alt="imagen">
-    </div>
-    <div class="flex flex-wrap gap-7 pl-2 mt-2">
-        {tecnologias && tecnologias.map((tecnologia) => (
-            <span class="w-16 text-sm font-medium bg-classic-secundary dark:bg-classic-primary text-classic-black px-2 py-1 rounded">{tecnologia}</span>
-        ))}
-    </div>
-    <div class="mt-2">
-        <p class="text-base font-medium p-2 text-center">{descripcion}</p>
-    </div>
-</section>
+
+        <section class="w-full h-auto flex flex-col justify-between mb-8 shadow-lg rounded-3xl transition-transform duration-300 transform hover:scale-105 bg-white text-black cursor-pointer dark:bg-gray-900 dark:text-white dark:border-4 dark:border-gray-950">
+            <div class="w-full h-2/3">
+                <img class="w-full h-full rounded-t-3xl object-cover" src={urlImagen} alt="imagen">
+            </div>
+            <div class="flex flex-wrap justify-around items-center gap-2 mt-2">
+                {tecnologias && tecnologias.map((tecnologia) => (
+                    <button class="bg-classic-secundary dark:bg-classic-primary text-white dark:text-black border border-blue-950 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group ">
+                <span class="bg-blue-400 shadow-blue-400 dark:bg-gray-400 dark:shadow-gray-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                {tecnologia}
+                 </button>
+
+                ))}
+            </div>
+            <div class="mt-2 px-4 text-center">
+                <p class="text-base">{descripcion}</p>
+            </div>
+            <div class="my-4" >
+                <a href={git} target="_blank">
+                    <button class="rounded-full h-8 w-8 dark:bg-classic-primary animate-wiggle-more animate-infinite">
+                        <img class="dark:ml-1" src="../svg/brand-github.svg" alt="github" >
+                    </button>
+                </a>
+                <a href={urlWeb} target="_blank" class="ml-20 ">
+                    <button class="rounded-full h-8 w-8 dark:bg-classic-primary animate-wiggle-more animate-infinite">
+                        <img class="dark:ml-1" src="../svg/link.svg" alt="link" >
+                    </button>
+                </a>
+            </div>
+            </div>
+        </section>
+
+

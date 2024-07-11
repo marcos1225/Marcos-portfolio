@@ -1,0 +1,23 @@
+---
+import CardProyectos from "../components/CardProyectos.astro";
+import BotonAtras from "../components/BotonAtras.astro";
+import MoreInfoProjects from "../layouts/MoreInfoProjects.astro";
+---
+
+<MoreInfoProjects title="Portafolio">
+  <div class="mt-3">
+    <BotonAtras/>
+  </div>
+    <section id="proyectos" class="w-full h-auto text-center p-4  dark:text-white ">
+        <h2 class="text-2xl md:text-3xl  lg:text-3xl  font-bold mb-6 text-classic-white">Proyectos</h2>
+      <section class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <CardProyectos urlImagen="img/Uver.jpeg" descripcion="Implemente el prototipo de un clon de uver en Vue Js, el cual utiliza la api de google maps y laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/Proyecto_Uver_FrontEnd" urlWeb="https://uverclon.netlify.app/"/>
+        <CardProyectos urlImagen="img/sistemaoficinas.jpeg" descripcion="Implemente un sistema de oficionas el cual es un CRUD (Create, Read, Update, Delete) y utiliza laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/SistemaOficinas" urlWeb="https://sistemaoficinas.netlify.app/" />
+        <CardProyectos urlImagen="img/guitarla.JPG" descripcion="Implemente el prototipo de una tienda de guitarras en vue js" tecnologias={["Vue js", "CSS"]} git="https://github.com/marcos1225/tiendaguitar" urlWeb="https://storeguitarapp.netlify.app/"/>
+        <CardProyectos urlImagen="img/blogcafe.JPG" descripcion="Implemente en html y css un blog de cafe" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/BlogCafe" urlWeb="https://infocafe.netlify.app/"/>
+        <CardProyectos urlImagen="img/appturismo.JPG" descripcion="Implemente en html y tailwind una web de turismo" tecnologias={["HTML5", "Tailwind"]} git="https://github.com/marcos1225/sistemaTurismo" urlWeb="https://sistematurismo.netlify.app/"/>
+        <CardProyectos urlImagen="img/burgerstar.jpg" descripcion="Implemente un blog de hamburguesas con css y html5" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/burgerStar" urlWeb="https://burgerstar.netlify.app/"/>
+        <CardProyectos urlImagen="img/frontEndStore.JPG" descripcion="tienda de camisas de front End con css y html5, aprendiendo las bases de lo que es el desarrollo web" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/TiendaCamisasLenguajes" urlWeb="https://tiendacamisasfronend.netlify.app/"/>
+        </section>
+        </section>
+      </MoreInfoProjects>

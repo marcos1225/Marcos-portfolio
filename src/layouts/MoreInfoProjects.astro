@@ -1,5 +1,5 @@
 ---
-import NavBar from '../components/NavBar.astro';
+import DarkMode from '../components/DarkMode';
 import FooterPortofolio from '../components/FooterPortofolio.astro';
 interface Props {
   title: string;
@@ -17,9 +17,11 @@ const { title } = Astro.props;
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
 </head>
-<body class="w-full font-sans bg-classic-blanco dark:bg-gray-900">
-  <NavBar />
-  <main >
+<body class="w-full font-sans dark:bg-gray-900">
+    <section class="absolute top-4 right-0">
+    <DarkMode  client:load/>
+    </section>
+     <main >
     <slot />
   </main>
   <FooterPortofolio />
