@@ -1,5 +1,6 @@
 ---
 import CardProyectos from "./CardProyectos.astro";
+import MoreProjects from "./MoreProjects.astro";
 
 ---
 <section id="proyectos" class="w-full h-auto text-center mt-4 p-4 border-y-4 border-gray-100  dark:text-white dark:border-gray-800 ">
@@ -9,16 +10,5 @@ import CardProyectos from "./CardProyectos.astro";
     <CardProyectos urlImagen="img/sistemaoficinas.jpeg" descripcion="Implemente un sistema de oficionas el cual es un CRUD (Create, Read, Update, Delete) y utiliza laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/SistemaOficinas" urlWeb="https://sistemaoficinas.netlify.app/" />
     <CardProyectos urlImagen="img/guitarla.JPG" descripcion="La aplicacion web es  de una tienda de guitarras la cual fue desarrollada en vue js, cuenta con la descripcion de cada una de las guitarras y el carrito de compras" tecnologias={["Vue js", "CSS"]} git="https://github.com/marcos1225/tiendaguitar" urlWeb="https://storeguitarapp.netlify.app/"/>
     </section>
-    <section class="mt-8">
-      <h1 class="text-2xl font-mono font-light">Quieres ver todos los proyectos?</h1>
-      <div>
-        <div class="mt-4">
-        <a href="./projects" >
-          <button class="w-30 h-16 bg-blue-900 -full text-classic-white cursor-pointer transition-all px-6 py-2 rounded-lg
-          border-blue-950 text-white border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
-            active:border-b-[2px] active:brightness-90 active:translate-y-[2px]  dark:bg-classic-primary dark:border-grey-900 dark:text-black">Ver mas proyectos...</button>
-        </a>
-      </div>
-      </div>
-    </section>
+    <MoreProjects  client:load/>
     </section>
