@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SobreMi from "../components/SobreMi.astro";
 import Habilidades from "../components/Habilidades.astro";
 import Proyectos from "../components/Proyectos.astro";
-import MenuSm from "../components/MenuSm.astro";
+import MenuSm from "../components/MenuSm";
 import Educacion from "../components/Educacion.astro";
 import ContactForm from '../components/ContactoForm';
 ---
@@ -14,5 +14,5 @@ import ContactForm from '../components/ContactoForm';
   <Proyectos/>
   <Educacion/>
   <ContactForm client:load />
-  <MenuSm />
+  <MenuSm client:load />
 </Layout>

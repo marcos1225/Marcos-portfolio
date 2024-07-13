@@ -9,6 +9,7 @@ export default {
 			primary: '#EBF4F6',
 			secundary: '#102C57',
 			blanco: '#FFFFFF',
+			svg: '#EEEEEE',
 		  },
 		},
 	  },
