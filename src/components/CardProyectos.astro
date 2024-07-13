@@ -1,5 +1,6 @@
 ---
 interface Props {
+    titulo?: string;
     urlImagen?: string;
     descripcion?: string;
     tecnologias?: string[];
@@ -7,12 +8,13 @@ interface Props {
     urlWeb?: string;
 }
 
-const { urlImagen, descripcion, tecnologias, git, urlWeb } = Astro.props;
+const { urlImagen, descripcion, tecnologias, git, urlWeb, titulo } = Astro.props;
 ---
-
-        <section class="w-full h-auto flex flex-col justify-between mb-8 shadow-lg rounded-3xl transition-transform duration-300 transform hover:scale-105 bg-white text-black cursor-pointer dark:bg-gray-900 dark:text-white dark:border-4 dark:border-gray-950">
+        <section class="border-2 border-x-blue-100 shadow-lg  rounded-3xl transition-transform duration-300 transform hover:scale-105 bg-white text-black  dark:bg-gray-800 dark:text-white dark:border-2 dark:border-gray-950">
+            <h1 class="text-lg font-bold my-3  font-mono text-classic-secundary dark:text-white">{titulo}</h1>
+        <section class="w-full h-auto flex flex-col justify-between mb-4 ">
             <div class="w-full h-2/3">
-                <img class="w-full h-full rounded-t-3xl object-cover" src={urlImagen} alt="imagen">
+                <img class="w-full h-full  object-cover" src={urlImagen} alt="imagen">
             </div>
             <div class="flex flex-wrap justify-around items-center gap-2 mt-2">
                 {tecnologias && tecnologias.map((tecnologia) => (
@@ -23,22 +25,29 @@ const { urlImagen, descripcion, tecnologias, git, urlWeb } = Astro.props;
 
                 ))}
             </div>
-            <div class="mt-2 px-4 text-center">
+            <div class="mt-2 px-4 text-left">
                 <p class="text-base">{descripcion}</p>
             </div>
-            <div class="my-4" >
+            <div class="my-5 mx-auto flex" >
+                <div>
                 <a href={git} target="_blank">
                     <button class="rounded-full h-8 w-8 dark:bg-classic-primary animate-wiggle-more animate-infinite">
                         <img class="dark:ml-1" src="../svg/brand-github.svg" alt="github" >
                     </button>
                 </a>
+                <p class="-mt-3 dark:-mt-1">repositorio</p>
+                </div>
+                <div>
                 <a href={urlWeb} target="_blank" class="ml-20 ">
                     <button class="rounded-full h-8 w-8 dark:bg-classic-primary animate-wiggle-more animate-infinite">
                         <img class="dark:ml-1" src="../svg/link.svg" alt="link" >
                     </button>
                 </a>
+                <p class="ml-20 -mt-3 dark:-mt-1">enlace</p>
+            </div>
             </div>
             </div>
         </section>
+    </section>
 
 

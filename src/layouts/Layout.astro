@@ -1,6 +1,7 @@
 ---
 import NavBar from '../components/NavBar.astro';
 import FooterPortofolio from '../components/FooterPortofolio.astro';
+import AosInit from '../components/AosInit';
 interface Props {
   title: string;
 }
@@ -20,6 +21,7 @@ const { title } = Astro.props;
 <body class="w-full font-sans bg-classic-blanco dark:bg-gray-900">
   <NavBar />
   <main >
+    <AosInit client:load />
     <slot />
   </main>
   <FooterPortofolio />

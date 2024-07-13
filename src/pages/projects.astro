@@ -4,21 +4,100 @@ import BotonAtras from "../components/BotonAtras";
 import MoreInfoProjects from "../layouts/MoreInfoProjects.astro";
 ---
 
-<MoreInfoProjects title="Portafolio">
+<MoreInfoProjects title="Proyectos-Marcos">
   <div class="mt-3">
-    <BotonAtras client:load/>
+    <BotonAtras client:load />
   </div>
-    <section id="proyectos" class="w-full h-auto text-center p-4  dark:text-white ">
-        <h2 class="text-2xl md:text-3xl  lg:text-3xl  font-bold mb-6 text-classic-white">Proyectos</h2>
-      <section class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <CardProyectos urlImagen="/img/Uver.jpeg" descripcion="Implemente el prototipo de un clon de uver en Vue Js, el cual utiliza la api de google maps y laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/Proyecto_Uver_FrontEnd" urlWeb="https://uverclon.netlify.app/"/>
-        <CardProyectos urlImagen="/img/sistemaoficinas.jpeg" descripcion="Implemente un sistema de oficionas el cual es un CRUD (Create, Read, Update, Delete) y utiliza laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/SistemaOficinas" urlWeb="https://sistemaoficinas.netlify.app/" />
-        <CardProyectos urlImagen="/img/guitarla.JPG" descripcion="Implemente el prototipo de una tienda de guitarras en vue js" tecnologias={["Vue js", "CSS"]} git="https://github.com/marcos1225/tiendaguitar" urlWeb="https://storeguitarapp.netlify.app/"/>
-        <CardProyectos urlImagen="/img/blogcafe.JPG" descripcion="Implemente en html y css un blog de cafe" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/BlogCafe" urlWeb="https://infocafe.netlify.app/"/>
-        <CardProyectos urlImagen="/img/appturismo.JPG" descripcion="Implemente en html y tailwind una web de turismo" tecnologias={["HTML5", "Tailwind"]} git="https://github.com/marcos1225/sistemaTurismo" urlWeb="https://sistematurismo.netlify.app/"/>
-        <CardProyectos urlImagen="/img/burgerstar.jpg" descripcion="Implemente un blog de hamburguesas con css y html5" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/burgerStar" urlWeb="https://burgerstar.netlify.app/"/>
-        <CardProyectos urlImagen="/img/fronEndStore.JPG" descripcion="tienda de camisas de front End con css y html5, aprendiendo las bases de lo que es el desarrollo web" tecnologias={["HTML5", "CSS"]} git="https://github.com/marcos1225/TiendaCamisasLenguajes" urlWeb="https://tiendacamisasfronend.netlify.app/"/>
-        <CardProyectos urlImagen="/img/PortafolioMarcos.JPG" descripcion="Portafolio Personal, creado con astro js, algunos componentes de react, para manejar las interacciones del usuario" tecnologias={["Astro Js", "React", "Tailwind"]} git="https://github.com/marcos1225/Marcos-portfolio" urlWeb="https://marcos-portafolio.netlify.app/"/>
-        </section>
-        </section>
-      </MoreInfoProjects>
+  <section id="proyectos" class="w-full h-auto text-center p-4 dark:text-white">
+    <h2
+      class="text-2xl md:text-3xl lg:text-3xl font-bold mb-10 -mt-4 text-classic-white animate-fade-down animate-duration-[2000ms]">
+      Proyectos
+    </h2>
+    <section class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <CardProyectos
+          titulo="Uver Clon"
+          urlImagen="/img/Uver.jpeg"
+          descripcion="La aplicacion web utiliza una api local de laravel y google maps para mostrar ubicaciones, ademas de trazar la ruta del viaje solicitado, la aplicacion consiste en que el usuario que se registra como pasajero, ingresa su ubicacion de destino y el sistema le muestra la trayectoria del viaje en el mapa en tiempo real y todos esos datos del viaje se mandar a guardar en la base de datos"
+          tecnologias={["Vue Js", "Laravel", "Css", "Maps", "Mysql", "pinia", "localStorage"] }
+          git="https://github.com/marcos1225/Proyecto_Uver_FrontEnd"
+          urlWeb="https://uverclon.netlify.app/"
+        />
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000">
+        <CardProyectos
+          titulo="Sistema de Oficinas"
+          urlImagen="/img/sistemaoficinas.jpeg"
+          descripcion="El sistema de oficionas consiste en que el  pueda gestionar todo lo relacionado a la oficina, basicamente es a lo que le conocemos como CRUD (Create, Read, Update, Delete) en cualquier app, ademas de ello se utilizo laravel como backEnd de manera local y  Mysql como motor de bases de datos para gestionar todo el manejo de los datos de la aplicacion." 
+          tecnologias={["Vue Js", "Laravel", "Css", "Mysql", "composables", "router", "pinia"]}
+          git="https://github.com/marcos1225/SistemaOficinas"
+          urlWeb="https://sistemaoficinas.netlify.app/"
+        />
+      </div>
+      <div  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 
+        <CardProyectos
+          titulo="Tienda de Guitarras"
+          urlImagen="/img/guitarla.JPG"
+          descripcion="Este proyecto es una tienda de guitarras en Vue 3 que permite a los usuarios ver guitarras, añadirlas al carrito, ajustar cantidades, eliminar productos y vaciar el carrito. Usa la Composition API para el manejo reactivo del estado y guarda el carrito en el localStorage para persistencia. Los componentes Guitarra, Header, y Footer estructuran la interfaz. Al montar el componente, se inicializan guitarras y carrito desde una base de datos simulada y el localStorage, gestionando las operaciones del carrito en tiempo real."
+          tecnologias={["Vue js", "CSS", "Javascript"]}
+          git="https://github.com/marcos1225/tiendaguitar"
+          urlWeb="https://storeguitarapp.netlify.app/"
+        />
+      </div>
+      <div data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
+        <CardProyectos
+          titulo="Blog de cafe"
+          urlImagen="/img/blogcafe.JPG"
+          descripcion="Implemente en html y css un blog de cafe"
+          tecnologias={["HTML5", "CSS"]}
+          git="https://github.com/marcos1225/BlogCafe"
+          urlWeb="https://infocafe.netlify.app/"
+        />
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000">
+        <CardProyectos
+          titulo="Web de Turismo"
+          urlImagen="/img/appturismo.JPG"
+          descripcion="Implemente en html y tailwind una web de turismo"
+          tecnologias={["HTML5", "Tailwind"]}
+          git="https://github.com/marcos1225/sistemaTurismo"
+          urlWeb="https://sistematurismo.netlify.app/"
+        />
+      </div>
+      <div data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"> 
+        <CardProyectos
+          titulo="Web de hamburguesas"
+          urlImagen="/img/burgerstar.jpg"
+          descripcion="Implemente un blog de hamburguesas con css y html5"
+          tecnologias={["HTML5", "CSS"]}
+          git="https://github.com/marcos1225/burgerStar"
+          urlWeb="https://burgerstar.netlify.app/"
+        />
+      </div>
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <CardProyectos
+          titulo="Tienda de Camisas FrontEnd"
+          urlImagen="/img/fronEndStore.JPG"
+          descripcion="tienda de camisas de front End con css y html5, aprendiendo las bases de lo que es el desarrollo web"
+          tecnologias={["HTML5", "CSS"]}
+          git="https://github.com/marcos1225/TiendaCamisasLenguajes"
+          urlWeb="https://tiendacamisasfronend.netlify.app/"
+        />
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000">
+        <CardProyectos
+          titulo="Portafolio Personal"
+          urlImagen="/img/PortafolioMarcos.JPG"
+          descripcion="Portafolio Personal, creado con astro js, algunos componentes de react, para manejar las interacciones del usuario"
+          tecnologias={["Astro Js", "React", "Tailwind"]}
+          git="https://github.com/marcos1225/Marcos-portfolio"
+          urlWeb="https://marcos-portafolio.netlify.app/"
+        />
+      </div>
+    </section>
+  </section>
+</MoreInfoProjects>

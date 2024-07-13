@@ -1,14 +1,52 @@
 ---
 import CardProyectos from "./CardProyectos.astro";
 import MoreProjects from "./MoreProjects.astro";
-
 ---
-<section id="proyectos" class="w-full h-auto text-center mt-4 p-4 border-y-4 border-gray-100  dark:text-white dark:border-gray-800 ">
-    <h2 class="text-2xl md:text-3xl  lg:text-3xl  font-bold mb-6 text-classic-white font-mono">Proyectos Destacados</h2>
+
+<section
+  id="proyectos"
+  class="w-full h-auto text-center mt-4 p-4 border-y-4 border-gray-100 dark:text-white dark:border-gray-800">
+  <h2
+    class="text-2xl md:text-3xl lg:text-3xl font-bold mb-6 text-classic-white font-mono">
+    Proyectos Destacados
+  </h2>
   <section class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-    <CardProyectos urlImagen="img/Uver.jpeg" descripcion="Implemente el prototipo de un clon de uver en Vue Js, el cual utiliza la api de google maps y laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/Proyecto_Uver_FrontEnd" urlWeb="https://uverclon.netlify.app/"/>
-    <CardProyectos urlImagen="img/sistemaoficinas.jpeg" descripcion="Implemente un sistema de oficionas el cual es un CRUD (Create, Read, Update, Delete) y utiliza laravel como backEnd" tecnologias={["Vue Js", "Laravel" ,"Css"]} git="https://github.com/marcos1225/SistemaOficinas" urlWeb="https://sistemaoficinas.netlify.app/" />
-    <CardProyectos urlImagen="img/guitarla.JPG" descripcion="La aplicacion web es  de una tienda de guitarras la cual fue desarrollada en vue js, cuenta con la descripcion de cada una de las guitarras y el carrito de compras" tecnologias={["Vue js", "CSS"]} git="https://github.com/marcos1225/tiendaguitar" urlWeb="https://storeguitarapp.netlify.app/"/>
-    </section>
-    <MoreProjects/>
-    </section>
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
+      <CardProyectos
+        titulo="Uver Clon"
+        urlImagen="img/Uver.jpeg"
+        descripcion="Implemente el prototipo de un clon de uver en Vue Js, el cual utiliza la api de google maps y laravel como backEnd"
+        tecnologias={["Vue Js", "Laravel", "Css"]}
+        git="https://github.com/marcos1225/Proyecto_Uver_FrontEnd"
+        urlWeb="https://uverclon.netlify.app/"
+      />
+    </div>
+    <div data-aos="zoom-in">
+      <CardProyectos
+        titulo="Sistema de Oficinas"
+        urlImagen="img/sistemaoficinas.jpeg"
+        descripcion="Implemente un sistema de oficinas el cual es un CRUD (Create, Read, Update, Delete) y utiliza laravel como backEnd"
+        tecnologias={["Vue Js", "Laravel", "Css"]}
+        git="https://github.com/marcos1225/SistemaOficinas"
+        urlWeb="https://sistemaoficinas.netlify.app/"
+      />
+    </div>
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000" >
+      <CardProyectos
+        titulo="Tienda de Guitarras"
+        urlImagen="img/guitarla.JPG"
+        descripcion="La aplicacion web es de una tienda de guitarras la cual fue desarrollada en vue js, cuenta con la descripcion de cada una de las guitarras y el carrito de compras"
+        tecnologias={["Vue js", "CSS"]}
+        git="https://github.com/marcos1225/tiendaguitar"
+        urlWeb="https://storeguitarapp.netlify.app/"
+      />
+    </div>
+  </section>
+  <MoreProjects />
+</section>
